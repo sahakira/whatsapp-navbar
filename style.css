@@ -1,0 +1,99 @@
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       background-color: azure;
+       height: 100vh;
+       width: 100vw;
+   }
+
+   .navbar {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-top: 20px;
+       cursor: pointer;
+   }
+
+   .right-navbar img {
+       width: 100px;
+   }
+
+   .center-navbar {
+       display: flex;
+       gap: 1.2rem;
+   }
+
+   .center-navbar>div {
+       display: flex;
+   }
+
+   .items {
+       gap: 1.1rem;
+       font-size: 18px;
+       /* font-weight: bold; */
+   }
+
+   .feature {
+       font-size: 18px;
+       position: relative;
+   }
+
+   .feature::after {
+       content: '';
+       position: absolute;
+       bottom: 0%;
+       left: 1%;
+       height: 2px;
+       width: 90%;
+       background-color: green;
+       transform: scaleX(0);
+       transition: all 0.5s ease-in-out;
+       transform-origin: left;
+   }
+
+   .feature:hover::after {
+       transform: scaleX(1);
+   }
+
+   .items>p{
+    position: relative;
+   }
+   .items>p::after {
+       content: '';
+       position: absolute;
+       bottom: 0%;
+       left: 2%;
+       height: 2px;
+       width: 99%;
+       background-color: green;
+       transform: scale(0);
+       transition: all 0.5s ease-in-out;
+       transform-origin: left;
+   }
+   .items>p:hover::after{
+    transform: scaleX(1);
+   }
+
+   .left-navbar {
+       display: flex;
+       margin-right: 20px;
+       gap: 5px;
+       border: 2px solid black;
+       padding: 10px 20px;
+       border-radius: 20px;
+       font-size: 15px;
+       background-color: green;
+   }
+   @media screen and (min-width:500px){
+    .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            /* cursor: pointer; */
+        }
+   }
